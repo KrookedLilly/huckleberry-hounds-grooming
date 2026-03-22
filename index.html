@@ -20,13 +20,6 @@
     tailwindcss.config = {
       theme: {
         extend: {
-          colors: {
-            primary: '#5F7A61',
-            accent: '#7B5EA7',
-            dark: '#2C3E2D',
-            light: '#FBF7F2',
-            secondary: '#A7C4A0',
-          },
           fontFamily: {
             heading: ['Fredoka', 'sans-serif'],
             body: ['Poppins', 'sans-serif'],
@@ -69,10 +62,10 @@
   }
   </script>
 </head>
-<body class="font-body bg-light text-dark pb-16 md:pb-0">
+<body class="font-body bg-stone-50 text-emerald-950 pb-16 md:pb-0">
 
   <!-- ========== NAV ========== -->
-  <nav x-data="{ open: false }" class="bg-primary sticky top-0 z-40 shadow-md">
+  <nav x-data="{ open: false }" class="bg-emerald-700 sticky top-0 z-40 shadow-md">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#" class="font-heading text-xl md:text-2xl font-bold text-white">
         Huckleberry Hounds
@@ -88,51 +81,51 @@
       </button>
       <!-- Desktop Links -->
       <div class="hidden md:flex items-center space-x-6 text-white text-sm font-medium">
-        <a href="#services" class="hover:text-secondary transition">Services</a>
-        <a href="#about" class="hover:text-secondary transition">About</a>
-        <a href="#gallery" class="hover:text-secondary transition">Gallery</a>
-        <a href="#testimonials" class="hover:text-secondary transition">Reviews</a>
-        <a href="#book" class="hover:text-secondary transition">Book</a>
-        <a href="#location" class="hover:text-secondary transition">Location</a>
-        <a href="tel:+15098673939" class="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-full font-semibold transition">(509) 867-3939</a>
+        <a href="#services" class="hover:text-emerald-300 transition">Services</a>
+        <a href="#about" class="hover:text-emerald-300 transition">About</a>
+        <a href="#gallery" class="hover:text-emerald-300 transition">Gallery</a>
+        <a href="#testimonials" class="hover:text-emerald-300 transition">Reviews</a>
+        <a href="#book" class="hover:text-emerald-300 transition">Book</a>
+        <a href="#location" class="hover:text-emerald-300 transition">Location</a>
+        <a href="tel:+15098673939" class="bg-violet-600 hover:bg-violet-600/90 text-white px-4 py-2 rounded-full font-semibold transition">(509) 867-3939</a>
       </div>
     </div>
     <!-- Mobile Menu -->
-    <div x-show="open" x-cloak x-transition class="md:hidden bg-dark/95 px-4 pb-4 space-y-3 text-white text-center">
-      <a @click="open = false" href="#services" class="block py-2 hover:text-secondary transition">Services</a>
-      <a @click="open = false" href="#about" class="block py-2 hover:text-secondary transition">About</a>
-      <a @click="open = false" href="#gallery" class="block py-2 hover:text-secondary transition">Gallery</a>
-      <a @click="open = false" href="#testimonials" class="block py-2 hover:text-secondary transition">Reviews</a>
-      <a @click="open = false" href="#book" class="block py-2 hover:text-secondary transition">Book</a>
-      <a @click="open = false" href="#location" class="block py-2 hover:text-secondary transition">Location</a>
-      <a href="tel:+15098673939" class="block bg-accent text-white py-3 rounded-full font-semibold">Call (509) 867-3939</a>
+    <div x-show="open" x-cloak x-transition class="md:hidden bg-emerald-950/95 px-4 pb-4 space-y-3 text-white text-center">
+      <a @click="open = false" href="#services" class="block py-2 hover:text-emerald-300 transition">Services</a>
+      <a @click="open = false" href="#about" class="block py-2 hover:text-emerald-300 transition">About</a>
+      <a @click="open = false" href="#gallery" class="block py-2 hover:text-emerald-300 transition">Gallery</a>
+      <a @click="open = false" href="#testimonials" class="block py-2 hover:text-emerald-300 transition">Reviews</a>
+      <a @click="open = false" href="#book" class="block py-2 hover:text-emerald-300 transition">Book</a>
+      <a @click="open = false" href="#location" class="block py-2 hover:text-emerald-300 transition">Location</a>
+      <a href="tel:+15098673939" class="block bg-violet-600 text-white py-3 rounded-full font-semibold">Call (509) 867-3939</a>
     </div>
   </nav>
 
   <!-- ========== HERO ========== -->
-  <section class="bg-gradient-to-br from-primary/10 via-light to-secondary/20 py-16 md:py-24">
+  <section class="bg-gradient-to-br from-emerald-700/10 via-stone-50 to-emerald-300/20 py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <!-- Decorative paw print -->
-      <div class="text-accent text-5xl mb-4" aria-hidden="true">&#128062;</div>
-      <h1 class="font-heading text-4xl md:text-6xl font-bold text-dark leading-tight mb-4">
+      <div class="text-violet-600 text-5xl mb-4" aria-hidden="true">&#128062;</div>
+      <h1 class="font-heading text-4xl md:text-6xl font-bold text-emerald-950 leading-tight mb-4">
         Huckleberry Hounds<br>
-        <span class="text-primary">Dog Grooming</span>
+        <span class="text-emerald-700">Dog Grooming</span>
       </h1>
-      <p class="font-heading text-xl md:text-2xl text-accent font-medium mb-6">
+      <p class="font-heading text-xl md:text-2xl text-violet-600 font-medium mb-6">
         Where Every Pup Leaves Happy, Fresh &amp; Wearing a Bandana
       </p>
-      <p class="max-w-2xl mx-auto text-dark/80 text-base md:text-lg mb-8 leading-relaxed">
+      <p class="max-w-2xl mx-auto text-emerald-950/80 text-base md:text-lg mb-8 leading-relaxed">
         Owned and operated by Amanda, Huckleberry Hounds is a one-woman grooming studio where your dog gets undivided, loving attention from start to finish. We use natural and organic products to keep your pup looking and feeling their absolute best.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="tel:+15098673939" class="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg transition transform hover:scale-105">
+        <a href="tel:+15098673939" class="bg-violet-600 hover:bg-violet-600/90 text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg transition transform hover:scale-105">
           Call to Book: (509) 867-3939
         </a>
-        <a href="#services" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition">
+        <a href="#services" class="border-2 border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition">
           View Services
         </a>
       </div>
-      <div class="mt-8 flex items-center justify-center gap-2 text-sm text-dark/70">
+      <div class="mt-8 flex items-center justify-center gap-2 text-sm text-emerald-950/70">
         <span class="text-yellow-500 text-lg">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="font-semibold">5.0</span> &mdash; 25 reviews on Google
       </div>
@@ -143,81 +136,81 @@
   <section id="services" class="py-16 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-3">Services &amp; Pricing</h2>
-        <p class="text-dark/70 max-w-xl mx-auto">Professional grooming tailored to your pup's breed, coat type, and personality. Every visit includes a fresh bandana!</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-emerald-950 mb-3">Services &amp; Pricing</h2>
+        <p class="text-emerald-950/70 max-w-xl mx-auto">Professional grooming tailored to your pup's breed, coat type, and personality. Every visit includes a fresh bandana!</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Full Grooming -->
-        <div class="bg-light border border-secondary/30 rounded-2xl p-6 hover:shadow-lg transition">
-          <div class="w-12 h-12 bg-accent/15 rounded-full flex items-center justify-center text-accent text-2xl mb-4">&#9988;</div>
-          <h3 class="font-heading text-xl font-bold text-dark mb-2">Full Grooming</h3>
-          <p class="text-dark/70 text-sm leading-relaxed">Complete bath, haircut, blow-dry, nail trim, ear cleaning, and finishing touches. Your pup leaves looking and smelling amazing.</p>
+        <div class="bg-stone-50 border border-emerald-300/30 rounded-2xl p-6 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-violet-600/15 rounded-full flex items-center justify-center text-violet-600 text-2xl mb-4">&#9988;</div>
+          <h3 class="font-heading text-xl font-bold text-emerald-950 mb-2">Full Grooming</h3>
+          <p class="text-emerald-950/70 text-sm leading-relaxed">Complete bath, haircut, blow-dry, nail trim, ear cleaning, and finishing touches. Your pup leaves looking and smelling amazing.</p>
         </div>
 
         <!-- Bath & Brush -->
-        <div class="bg-light border border-secondary/30 rounded-2xl p-6 hover:shadow-lg transition">
-          <div class="w-12 h-12 bg-accent/15 rounded-full flex items-center justify-center text-accent text-2xl mb-4">&#128703;</div>
-          <h3 class="font-heading text-xl font-bold text-dark mb-2">Bath &amp; Brush</h3>
-          <p class="text-dark/70 text-sm leading-relaxed">A thorough bath with natural &amp; organic shampoo, full blow-dry, and brush-out. Perfect between full grooms to keep coats fresh.</p>
+        <div class="bg-stone-50 border border-emerald-300/30 rounded-2xl p-6 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-violet-600/15 rounded-full flex items-center justify-center text-violet-600 text-2xl mb-4">&#128703;</div>
+          <h3 class="font-heading text-xl font-bold text-emerald-950 mb-2">Bath &amp; Brush</h3>
+          <p class="text-emerald-950/70 text-sm leading-relaxed">A thorough bath with natural &amp; organic shampoo, full blow-dry, and brush-out. Perfect between full grooms to keep coats fresh.</p>
         </div>
 
         <!-- Nail Trimming -->
-        <div class="bg-light border border-secondary/30 rounded-2xl p-6 hover:shadow-lg transition">
-          <div class="w-12 h-12 bg-accent/15 rounded-full flex items-center justify-center text-accent text-2xl mb-4">&#128062;</div>
-          <h3 class="font-heading text-xl font-bold text-dark mb-2">Nail Trimming</h3>
-          <p class="text-dark/70 text-sm leading-relaxed">Quick, gentle nail trims to keep your dog comfortable and their paws healthy. Available as a standalone service.</p>
+        <div class="bg-stone-50 border border-emerald-300/30 rounded-2xl p-6 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-violet-600/15 rounded-full flex items-center justify-center text-violet-600 text-2xl mb-4">&#128062;</div>
+          <h3 class="font-heading text-xl font-bold text-emerald-950 mb-2">Nail Trimming</h3>
+          <p class="text-emerald-950/70 text-sm leading-relaxed">Quick, gentle nail trims to keep your dog comfortable and their paws healthy. Available as a standalone service.</p>
         </div>
 
         <!-- Ear Cleaning -->
-        <div class="bg-light border border-secondary/30 rounded-2xl p-6 hover:shadow-lg transition">
-          <div class="w-12 h-12 bg-accent/15 rounded-full flex items-center justify-center text-accent text-2xl mb-4">&#128054;</div>
-          <h3 class="font-heading text-xl font-bold text-dark mb-2">Ear Cleaning</h3>
-          <p class="text-dark/70 text-sm leading-relaxed">Gentle ear cleaning to remove buildup and help prevent infections. Included with full grooms or available separately.</p>
+        <div class="bg-stone-50 border border-emerald-300/30 rounded-2xl p-6 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-violet-600/15 rounded-full flex items-center justify-center text-violet-600 text-2xl mb-4">&#128054;</div>
+          <h3 class="font-heading text-xl font-bold text-emerald-950 mb-2">Ear Cleaning</h3>
+          <p class="text-emerald-950/70 text-sm leading-relaxed">Gentle ear cleaning to remove buildup and help prevent infections. Included with full grooms or available separately.</p>
         </div>
 
         <!-- De-Shedding Treatment -->
-        <div class="bg-light border border-secondary/30 rounded-2xl p-6 hover:shadow-lg transition">
-          <div class="w-12 h-12 bg-accent/15 rounded-full flex items-center justify-center text-accent text-2xl mb-4">&#10024;</div>
-          <h3 class="font-heading text-xl font-bold text-dark mb-2">De-Shedding Treatment</h3>
-          <p class="text-dark/70 text-sm leading-relaxed">Specialized treatment to reduce shedding and keep your home fur-free. Great for double-coated and heavy-shedding breeds.</p>
+        <div class="bg-stone-50 border border-emerald-300/30 rounded-2xl p-6 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-violet-600/15 rounded-full flex items-center justify-center text-violet-600 text-2xl mb-4">&#10024;</div>
+          <h3 class="font-heading text-xl font-bold text-emerald-950 mb-2">De-Shedding Treatment</h3>
+          <p class="text-emerald-950/70 text-sm leading-relaxed">Specialized treatment to reduce shedding and keep your home fur-free. Great for double-coated and heavy-shedding breeds.</p>
         </div>
 
         <!-- All Breeds Note -->
-        <div class="bg-accent/10 border border-accent/20 rounded-2xl p-6 flex flex-col justify-center">
-          <p class="font-heading text-lg font-bold text-accent mb-2">All Breeds &amp; Sizes Welcome</p>
-          <p class="text-dark/70 text-sm leading-relaxed">Including large breeds! From Chihuahuas to Great Danes, every pup gets the same loving care.</p>
-          <p class="mt-3 text-sm font-semibold text-primary">&#127807; We use natural &amp; organic products</p>
+        <div class="bg-violet-600/10 border border-violet-600/20 rounded-2xl p-6 flex flex-col justify-center">
+          <p class="font-heading text-lg font-bold text-violet-600 mb-2">All Breeds &amp; Sizes Welcome</p>
+          <p class="text-emerald-950/70 text-sm leading-relaxed">Including large breeds! From Chihuahuas to Great Danes, every pup gets the same loving care.</p>
+          <p class="mt-3 text-sm font-semibold text-emerald-700">&#127807; We use natural &amp; organic products</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========== ABOUT AMANDA ========== -->
-  <section id="about" class="py-16 md:py-20 bg-gradient-to-b from-secondary/10 to-light">
+  <section id="about" class="py-16 md:py-20 bg-gradient-to-b from-emerald-300/10 to-stone-50">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <!-- Photo Placeholder -->
-        <div class="bg-secondary/20 rounded-2xl aspect-square md:aspect-[4/5] flex items-center justify-center text-primary text-sm italic shadow-inner">
+        <div class="bg-emerald-300/20 rounded-2xl aspect-square md:aspect-[4/5] flex items-center justify-center text-emerald-700 text-sm italic shadow-inner">
           Photo: Amanda with a Happy Pup
         </div>
         <!-- Bio -->
         <div>
-          <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">Meet Amanda</h2>
-          <p class="text-dark/80 leading-relaxed mb-4">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-emerald-950 mb-4">Meet Amanda</h2>
+          <p class="text-emerald-950/80 leading-relaxed mb-4">
             Amanda is the heart and soul of Huckleberry Hounds. As a one-woman operation, she gives every dog her complete, undivided attention. There are no assembly lines here &mdash; just one groomer, one pup, and a whole lot of love.
           </p>
-          <p class="text-dark/80 leading-relaxed mb-4">
+          <p class="text-emerald-950/80 leading-relaxed mb-4">
             With a genuine passion for dogs of all shapes and sizes, Amanda has built a reputation that speaks for itself: a perfect 5.0-star rating with every single client describing her as "the best." Her approach is calm, patient, and always focused on making each dog feel safe and comfortable.
           </p>
-          <p class="text-dark/80 leading-relaxed mb-6">
+          <p class="text-emerald-950/80 leading-relaxed mb-6">
             Established in 2024, Huckleberry Hounds may be new to Spokane Valley, but Amanda's dedication to quality grooming and natural products has already earned a loyal following. Every pup goes home looking sharp, smelling great, and wearing a fresh bandana.
           </p>
           <div class="flex flex-wrap gap-3">
-            <span class="bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full">One-on-One Attention</span>
-            <span class="bg-accent/10 text-accent text-sm font-medium px-4 py-2 rounded-full">Natural Products</span>
-            <span class="bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full">All Breeds Welcome</span>
-            <span class="bg-accent/10 text-accent text-sm font-medium px-4 py-2 rounded-full">Est. 2024</span>
+            <span class="bg-emerald-700/10 text-emerald-700 text-sm font-medium px-4 py-2 rounded-full">One-on-One Attention</span>
+            <span class="bg-violet-600/10 text-violet-600 text-sm font-medium px-4 py-2 rounded-full">Natural Products</span>
+            <span class="bg-emerald-700/10 text-emerald-700 text-sm font-medium px-4 py-2 rounded-full">All Breeds Welcome</span>
+            <span class="bg-violet-600/10 text-violet-600 text-sm font-medium px-4 py-2 rounded-full">Est. 2024</span>
           </div>
         </div>
       </div>
@@ -228,26 +221,26 @@
   <section id="gallery" class="py-16 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-3">Our Happy Pups</h2>
-        <p class="text-dark/70 max-w-xl mx-auto">A look at some of the adorable dogs who've visited Huckleberry Hounds.</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-emerald-950 mb-3">Our Happy Pups</h2>
+        <p class="text-emerald-950/70 max-w-xl mx-auto">A look at some of the adorable dogs who've visited Huckleberry Hounds.</p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="bg-secondary/20 rounded-lg aspect-video flex items-center justify-center text-primary text-sm italic">
+        <div class="bg-emerald-300/20 rounded-lg aspect-video flex items-center justify-center text-emerald-700 text-sm italic">
           Photo: Freshly Groomed Goldendoodle
         </div>
-        <div class="bg-secondary/20 rounded-lg aspect-video flex items-center justify-center text-primary text-sm italic">
+        <div class="bg-emerald-300/20 rounded-lg aspect-video flex items-center justify-center text-emerald-700 text-sm italic">
           Photo: Before &amp; After &mdash; De-Shedding
         </div>
-        <div class="bg-secondary/20 rounded-lg aspect-video flex items-center justify-center text-primary text-sm italic">
+        <div class="bg-emerald-300/20 rounded-lg aspect-video flex items-center justify-center text-emerald-700 text-sm italic">
           Photo: Happy Pup with Bandana
         </div>
-        <div class="bg-secondary/20 rounded-lg aspect-video flex items-center justify-center text-primary text-sm italic">
+        <div class="bg-emerald-300/20 rounded-lg aspect-video flex items-center justify-center text-emerald-700 text-sm italic">
           Photo: Large Breed Grooming
         </div>
-        <div class="bg-secondary/20 rounded-lg aspect-video flex items-center justify-center text-primary text-sm italic">
+        <div class="bg-emerald-300/20 rounded-lg aspect-video flex items-center justify-center text-emerald-700 text-sm italic">
           Photo: Nail Trim Session
         </div>
-        <div class="bg-secondary/20 rounded-lg aspect-video flex items-center justify-center text-primary text-sm italic">
+        <div class="bg-emerald-300/20 rounded-lg aspect-video flex items-center justify-center text-emerald-700 text-sm italic">
           Photo: Bath Time
         </div>
       </div>
@@ -255,51 +248,51 @@
   </section>
 
   <!-- ========== TESTIMONIALS ========== -->
-  <section id="testimonials" class="py-16 md:py-20 bg-gradient-to-b from-light to-secondary/10">
+  <section id="testimonials" class="py-16 md:py-20 bg-gradient-to-b from-stone-50 to-emerald-300/10">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-3">What Our Clients Say</h2>
-        <div class="flex items-center justify-center gap-2 text-sm text-dark/70">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-emerald-950 mb-3">What Our Clients Say</h2>
+        <div class="flex items-center justify-center gap-2 text-sm text-emerald-950/70">
           <span class="text-yellow-500 text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           <span class="font-semibold">5.0</span> on Google &mdash; 25 reviews
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
         <!-- Review 1 -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-secondary/20">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-emerald-300/20">
           <div class="text-yellow-500 text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="text-dark/80 italic mb-4">"She is the only one that has groomed my dog."</p>
-          <p class="text-primary font-semibold text-sm">&mdash; Happy Client</p>
+          <p class="text-emerald-950/80 italic mb-4">"She is the only one that has groomed my dog."</p>
+          <p class="text-emerald-700 font-semibold text-sm">&mdash; Happy Client</p>
         </div>
         <!-- Review 2 -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-secondary/20">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-emerald-300/20">
           <div class="text-yellow-500 text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="text-dark/80 italic mb-4">"Reasonably priced."</p>
-          <p class="text-primary font-semibold text-sm">&mdash; Happy Client</p>
+          <p class="text-emerald-950/80 italic mb-4">"Reasonably priced."</p>
+          <p class="text-emerald-700 font-semibold text-sm">&mdash; Happy Client</p>
         </div>
         <!-- Review 3 -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-secondary/20">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-emerald-300/20">
           <div class="text-yellow-500 text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="text-dark/80 italic mb-4">"He absolutely adores her."</p>
-          <p class="text-primary font-semibold text-sm">&mdash; Happy Client</p>
+          <p class="text-emerald-950/80 italic mb-4">"He absolutely adores her."</p>
+          <p class="text-emerald-700 font-semibold text-sm">&mdash; Happy Client</p>
         </div>
         <!-- Review 4 -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-secondary/20">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-emerald-300/20">
           <div class="text-yellow-500 text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="text-dark/80 italic mb-4">"Our dogs come home smelling so good."</p>
-          <p class="text-primary font-semibold text-sm">&mdash; Happy Client</p>
+          <p class="text-emerald-950/80 italic mb-4">"Our dogs come home smelling so good."</p>
+          <p class="text-emerald-700 font-semibold text-sm">&mdash; Happy Client</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========== BOOK AN APPOINTMENT ========== -->
-  <section id="book" class="py-16 md:py-20 bg-accent text-white">
+  <section id="book" class="py-16 md:py-20 bg-violet-600 text-white">
     <div class="max-w-3xl mx-auto px-4 text-center">
       <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Book an Appointment</h2>
       <p class="text-white/90 text-lg mb-2">Call to schedule your pup's next grooming session.</p>
       <p class="text-white/70 text-sm mb-8">Amanda books by appointment to ensure every dog gets her full, undivided attention.</p>
-      <a href="tel:+15098673939" class="inline-block bg-white text-accent hover:bg-light px-10 py-4 rounded-full text-xl font-bold shadow-lg transition transform hover:scale-105">
+      <a href="tel:+15098673939" class="inline-block bg-white text-violet-600 hover:bg-stone-50 px-10 py-4 rounded-full text-xl font-bold shadow-lg transition transform hover:scale-105">
         (509) 867-3939
       </a>
       <p class="mt-6 text-white/60 text-sm italic">Online booking coming soon via MoeGo</p>
@@ -310,25 +303,25 @@
   <section id="location" class="py-16 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-3">Find Us</h2>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-emerald-950 mb-3">Find Us</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-8 items-start">
         <!-- Info -->
         <div>
           <div class="mb-6">
-            <h3 class="font-heading text-lg font-bold text-dark mb-1">Address</h3>
-            <p class="text-dark/70">2302 N Argonne Rd Suite B<br>Spokane Valley, WA 99212</p>
+            <h3 class="font-heading text-lg font-bold text-emerald-950 mb-1">Address</h3>
+            <p class="text-emerald-950/70">2302 N Argonne Rd Suite B<br>Spokane Valley, WA 99212</p>
           </div>
           <div class="mb-6">
-            <h3 class="font-heading text-lg font-bold text-dark mb-1">Phone</h3>
-            <a href="tel:+15098673939" class="text-accent font-semibold hover:underline">(509) 867-3939</a>
+            <h3 class="font-heading text-lg font-bold text-emerald-950 mb-1">Phone</h3>
+            <a href="tel:+15098673939" class="text-violet-600 font-semibold hover:underline">(509) 867-3939</a>
           </div>
           <div class="mb-6">
-            <h3 class="font-heading text-lg font-bold text-dark mb-1">Hours</h3>
-            <p class="text-dark/70">By Appointment Only</p>
-            <p class="text-dark/60 text-sm mt-1">Call ahead to book your pup's visit. We encourage prebooking to secure your preferred time.</p>
+            <h3 class="font-heading text-lg font-bold text-emerald-950 mb-1">Hours</h3>
+            <p class="text-emerald-950/70">By Appointment Only</p>
+            <p class="text-emerald-950/60 text-sm mt-1">Call ahead to book your pup's visit. We encourage prebooking to secure your preferred time.</p>
           </div>
-          <a href="tel:+15098673939" class="inline-block bg-primary hover:bg-dark text-white px-6 py-3 rounded-full font-semibold transition mt-2">
+          <a href="tel:+15098673939" class="inline-block bg-emerald-700 hover:bg-emerald-950 text-white px-6 py-3 rounded-full font-semibold transition mt-2">
             Call to Schedule
           </a>
         </div>
@@ -350,7 +343,7 @@
   </section>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="bg-dark text-white py-10">
+  <footer class="bg-emerald-950 text-white py-10">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Brand -->
@@ -361,21 +354,21 @@
         </div>
         <!-- Links -->
         <div>
-          <h4 class="font-heading text-sm font-bold uppercase tracking-wider mb-3 text-secondary">Quick Links</h4>
+          <h4 class="font-heading text-sm font-bold uppercase tracking-wider mb-3 text-emerald-300">Quick Links</h4>
           <ul class="space-y-2 text-white/70 text-sm">
-            <li><a href="#services" class="hover:text-secondary transition">Services</a></li>
-            <li><a href="#about" class="hover:text-secondary transition">About Amanda</a></li>
-            <li><a href="#gallery" class="hover:text-secondary transition">Gallery</a></li>
-            <li><a href="#testimonials" class="hover:text-secondary transition">Reviews</a></li>
-            <li><a href="#book" class="hover:text-secondary transition">Book an Appointment</a></li>
-            <li><a href="#location" class="hover:text-secondary transition">Location</a></li>
+            <li><a href="#services" class="hover:text-emerald-300 transition">Services</a></li>
+            <li><a href="#about" class="hover:text-emerald-300 transition">About Amanda</a></li>
+            <li><a href="#gallery" class="hover:text-emerald-300 transition">Gallery</a></li>
+            <li><a href="#testimonials" class="hover:text-emerald-300 transition">Reviews</a></li>
+            <li><a href="#book" class="hover:text-emerald-300 transition">Book an Appointment</a></li>
+            <li><a href="#location" class="hover:text-emerald-300 transition">Location</a></li>
           </ul>
         </div>
         <!-- Contact -->
         <div>
-          <h4 class="font-heading text-sm font-bold uppercase tracking-wider mb-3 text-secondary">Contact</h4>
+          <h4 class="font-heading text-sm font-bold uppercase tracking-wider mb-3 text-emerald-300">Contact</h4>
           <p class="text-white/70 text-sm mb-1">
-            <a href="tel:+15098673939" class="hover:text-secondary transition">(509) 867-3939</a>
+            <a href="tel:+15098673939" class="hover:text-emerald-300 transition">(509) 867-3939</a>
           </p>
           <p class="text-white/70 text-sm mb-1">2302 N Argonne Rd Suite B</p>
           <p class="text-white/70 text-sm">Spokane Valley, WA 99212</p>
@@ -388,7 +381,7 @@
   </footer>
 
   <!-- ========== STICKY CLICK-TO-CALL (MOBILE) ========== -->
-  <a href="tel:+15098673939" class="fixed bottom-0 inset-x-0 bg-accent text-white text-center py-4 text-lg font-bold md:hidden z-50 shadow-[0_-2px_10px_rgba(0,0,0,0.15)]">
+  <a href="tel:+15098673939" class="fixed bottom-0 inset-x-0 bg-violet-600 text-white text-center py-4 text-lg font-bold md:hidden z-50 shadow-[0_-2px_10px_rgba(0,0,0,0.15)]">
     Call Now &mdash; (509) 867-3939
   </a>
 
