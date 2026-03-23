@@ -36,9 +36,8 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "PetStore",
     "name": "Huckleberry Hounds Dog Grooming",
-    "image": "",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2302 N Argonne Rd Suite B",
@@ -47,18 +46,37 @@
       "postalCode": "99212",
       "addressCountry": "US"
     },
-    "telephone": "+15098673939",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.6878,
+      "longitude": -117.3614
+    },
+    "telephone": "+1-509-867-3939",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "description": "By appointment"
+      "description": "By appointment — walk-ins also welcome"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
+      "bestRating": "5",
       "reviewCount": "25"
     },
     "priceRange": "$$",
-    "description": "Full-service dog grooming for all breeds and sizes. Natural & organic products. Every pup goes home with a bandana."
+    "description": "Full-service dog grooming for all breeds and sizes in Spokane Valley, WA. Natural & organic products. Every pup goes home with a bandana.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Grooming Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Grooming" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bath & Brush" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nail Trimming" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ear Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "De-Shedding Treatment" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Teeth Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paw Treatment" } }
+      ]
+    }
   }
   </script>
   <style>
@@ -90,6 +108,7 @@
         <a href="#gallery" class="hover:text-emerald-300 transition">Gallery</a>
         <a href="#testimonials" class="hover:text-emerald-300 transition">Reviews</a>
         <a href="#book" class="hover:text-emerald-300 transition">Book</a>
+        <a href="#faq" class="hover:text-emerald-300 transition">FAQ</a>
         <a href="#location" class="hover:text-emerald-300 transition">Location</a>
         <a href="tel:+15098673939" class="bg-violet-600 hover:bg-violet-600/90 text-white px-4 py-2 rounded-full font-semibold transition">(509) 867-3939</a>
       </div>
@@ -101,6 +120,7 @@
       <a @click="open = false" href="#gallery" class="block py-2 hover:text-emerald-300 transition">Gallery</a>
       <a @click="open = false" href="#testimonials" class="block py-2 hover:text-emerald-300 transition">Reviews</a>
       <a @click="open = false" href="#book" class="block py-2 hover:text-emerald-300 transition">Book</a>
+      <a @click="open = false" href="#faq" class="block py-2 hover:text-emerald-300 transition">FAQ</a>
       <a @click="open = false" href="#location" class="block py-2 hover:text-emerald-300 transition">Location</a>
       <a href="tel:+15098673939" class="block bg-violet-600 text-white py-3 rounded-full font-semibold">Call (509) 867-3939</a>
     </div>
@@ -180,11 +200,26 @@
           <p class="text-emerald-950/70 text-sm leading-relaxed">Specialized treatment to reduce shedding and keep your home fur-free. Great for double-coated and heavy-shedding breeds.</p>
         </div>
 
+        <!-- Teeth Cleaning -->
+        <div class="bg-stone-50 border border-emerald-300/30 rounded-2xl p-6 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-violet-600/15 rounded-full flex items-center justify-center text-violet-600 text-2xl mb-4">&#129463;</div>
+          <h3 class="font-heading text-xl font-bold text-emerald-950 mb-2">Teeth Cleaning</h3>
+          <p class="text-emerald-950/70 text-sm leading-relaxed">Gentle teeth cleaning to freshen breath and support dental health. A great add-on to any grooming session.</p>
+        </div>
+
+        <!-- Paw Treatment -->
+        <div class="bg-stone-50 border border-emerald-300/30 rounded-2xl p-6 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-violet-600/15 rounded-full flex items-center justify-center text-violet-600 text-2xl mb-4">&#128062;</div>
+          <h3 class="font-heading text-xl font-bold text-emerald-950 mb-2">Paw Treatment</h3>
+          <p class="text-emerald-950/70 text-sm leading-relaxed">Moisturizing paw pad treatment to keep paws soft and protected. Perfect for dogs with dry or cracked pads.</p>
+        </div>
+
         <!-- All Breeds Note -->
-        <div class="bg-violet-600/10 border border-violet-600/20 rounded-2xl p-6 flex flex-col justify-center">
+        <div class="bg-violet-600/10 border border-violet-600/20 rounded-2xl p-6 flex flex-col justify-center sm:col-span-2 lg:col-span-1">
           <p class="font-heading text-lg font-bold text-violet-600 mb-2">All Breeds &amp; Sizes Welcome</p>
           <p class="text-emerald-950/70 text-sm leading-relaxed">Including large breeds! From Chihuahuas to Great Danes, every pup gets the same loving care.</p>
           <p class="mt-3 text-sm font-semibold text-emerald-700">&#127807; We use natural &amp; organic products</p>
+          <p class="mt-1 text-sm text-emerald-700">&#128054; Walk-ins welcome!</p>
         </div>
       </div>
     </div>
@@ -299,7 +334,63 @@
       <a href="tel:+15098673939" class="inline-block bg-white text-violet-600 hover:bg-stone-50 px-10 py-4 rounded-full text-xl font-bold shadow-lg transition transform hover:scale-105">
         (509) 867-3939
       </a>
-      <p class="mt-6 text-white/60 text-sm italic">Online booking coming soon via MoeGo</p>
+      <p class="mt-6 text-white/80 text-sm">Or book online: <a href="https://booking.moego.pet/go/?name=HuckleberryHounds" target="_blank" rel="noopener" class="underline hover:text-white transition">Book on MoeGo</a></p>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq" class="py-16 md:py-20 bg-stone-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-emerald-950 mb-3">Common Questions</h2>
+      </div>
+      <div x-data="{ active: null }" class="space-y-3">
+        <div class="bg-white border border-emerald-300/30 rounded-2xl overflow-hidden">
+          <button @click="active = active === 1 ? null : 1" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-bold text-emerald-950">Do I need an appointment?</span>
+            <svg :class="active === 1 ? 'rotate-180' : ''" class="h-5 w-5 text-emerald-700 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="active === 1" x-collapse x-cloak class="px-6 pb-5">
+            <p class="text-emerald-950/70 text-sm leading-relaxed">Appointments are encouraged to ensure your pup gets Amanda's full, undivided attention, but walk-ins are also welcome! Call (509) 867-3939 or book online through MoeGo to reserve your preferred time.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-emerald-300/30 rounded-2xl overflow-hidden">
+          <button @click="active = active === 2 ? null : 2" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-bold text-emerald-950">What breeds and sizes do you groom?</span>
+            <svg :class="active === 2 ? 'rotate-180' : ''" class="h-5 w-5 text-emerald-700 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="active === 2" x-collapse x-cloak class="px-6 pb-5">
+            <p class="text-emerald-950/70 text-sm leading-relaxed">All breeds and all sizes — including large breeds! Whether you have a tiny Yorkie or a giant Great Dane, Amanda will take great care of them.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-emerald-300/30 rounded-2xl overflow-hidden">
+          <button @click="active = active === 3 ? null : 3" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-bold text-emerald-950">What products do you use?</span>
+            <svg :class="active === 3 ? 'rotate-180' : ''" class="h-5 w-5 text-emerald-700 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="active === 3" x-collapse x-cloak class="px-6 pb-5">
+            <p class="text-emerald-950/70 text-sm leading-relaxed">We exclusively use natural and organic grooming products that are gentle on your dog's skin and coat. No harsh chemicals — just clean, safe products that leave your pup smelling amazing.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-emerald-300/30 rounded-2xl overflow-hidden">
+          <button @click="active = active === 4 ? null : 4" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-bold text-emerald-950">How long does a grooming session take?</span>
+            <svg :class="active === 4 ? 'rotate-180' : ''" class="h-5 w-5 text-emerald-700 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="active === 4" x-collapse x-cloak class="px-6 pb-5">
+            <p class="text-emerald-950/70 text-sm leading-relaxed">It depends on your dog's breed, coat type, and the services requested. A full groom typically takes 1.5 to 3 hours. Because Amanda works one-on-one with each dog, your pup gets her complete attention the entire time — no crate waiting.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-emerald-300/30 rounded-2xl overflow-hidden">
+          <button @click="active = active === 5 ? null : 5" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-heading font-bold text-emerald-950">Does my dog really get a bandana?</span>
+            <svg :class="active === 5 ? 'rotate-180' : ''" class="h-5 w-5 text-emerald-700 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div x-show="active === 5" x-collapse x-cloak class="px-6 pb-5">
+            <p class="text-emerald-950/70 text-sm leading-relaxed">Yes! Every pup goes home wearing a fresh bandana after their groom. It's the Huckleberry Hounds signature touch.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -322,8 +413,8 @@
           </div>
           <div class="mb-6">
             <h3 class="font-heading text-lg font-bold text-emerald-950 mb-1">Hours</h3>
-            <p class="text-emerald-950/70">By Appointment Only</p>
-            <p class="text-emerald-950/60 text-sm mt-1">Call ahead to book your pup's visit. We encourage prebooking to secure your preferred time.</p>
+            <p class="text-emerald-950/70">By Appointment — Walk-Ins Welcome</p>
+            <p class="text-emerald-950/60 text-sm mt-1">Appointments encouraged to secure your preferred time, but walk-ins are always welcome!</p>
           </div>
           <a href="tel:+15098673939" class="inline-block bg-emerald-700 hover:bg-emerald-950 text-white px-6 py-3 rounded-full font-semibold transition mt-2">
             Call to Schedule
@@ -332,7 +423,7 @@
         <!-- Map -->
         <div class="rounded-2xl overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.0!2d-117.3614!3d47.6878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2302+N+Argonne+Rd+Suite+B%2C+Spokane+Valley%2C+WA+99212!5e0!3m2!1sen!2sus!4v1"
+            src="https://www.google.com/maps?q=2302+N+Argonne+Rd+Suite+B,+Spokane+Valley,+WA+99212&output=embed"
             width="100%"
             height="350"
             style="border:0;"
